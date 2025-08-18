@@ -1,4 +1,4 @@
-package com.example.wishoclock
+package com.example.wishoclock.ViewLayer
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,8 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.wishoclock.R
 import com.example.wishoclock.R.id.add_wish_btn
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +18,14 @@ class MainActivity : AppCompatActivity() {
         val topBar_Title = findViewById<TextView>(R.id.topbar_Text)
         val subtitle = findViewById<TextView>(R.id.subtitle)
         val add_wish_btn : Button = findViewById<Button>(add_wish_btn)
+
+        add_wish_btn.setOnClickListener{
+            val bottmForm = BottomSheetForm()
+            bottmForm.show(
+                supportFragmentManager,
+                "BottomForm"
+            )
+        }
 
     }
 }
