@@ -43,15 +43,15 @@ Open in Android Studio
 Sync Gradle and run on an emulator/device
 
 ## 📌 Roadmap
- Build event creation & storage
+- [ ] Build event creation & storage
 
- Add reminder & notification system
+- [ ] Add reminder & notification system
 
- Implement dark mode
+- [ ] Implement dark mode
 
- Polish UI/UX
+- [ ] Polish UI/UX
 
- Beta release on Play Store
+- [ ] Beta release on Play Store
 
 ## 🤝 Contributing
 As this is still in the early development phase, contributions are welcome after the initial version is stable. Stay tuned!
