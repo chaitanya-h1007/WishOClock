@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.wishoclock.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.chip.ChipGroup
 import com.google.android.material.textfield.TextInputLayout
 import java.util.Calendar
 
@@ -24,18 +25,20 @@ class BottomSheetForm : BottomSheetDialogFragment(){
         val dateInputLayout = formView.findViewById<TextInputLayout>(R.id.dateInputLayout)
         val nameInputLayout = formView.findViewById<TextInputLayout>(R.id.nameInputLayout)
         val cityInputLayout = formView.findViewById<TextInputLayout>(R.id.cityInputLayout)
+        val userTzInputLayer = formView.findViewById<TextInputLayout>(R.id.userTZInputLayout)
+        val recpientTzInputLayer = formView.findViewById<TextInputLayout>(R.id.recipentTZInputLayout)
+        val occasionChipG = formView.findViewById<ChipGroup>(R.id.chip_group_occasion)
 
         val usrNameText : EditText = formView.findViewById<EditText>(R.id.nameEditText)
         val dateEditText : EditText = formView.findViewById<EditText>(R.id.dateEditText)
         val cityEditText : EditText = formView.findViewById<EditText>(R.id.cityEditText)
 
-        val usrTimeZone : TextView = formView.findViewById<TextView>(R.id.usr_time_zone)
+        val usrTimeZone : TextView = formView.findViewById<TextView>(R.id.user_time_zone)
         val recpTimeZone : TextView = formView.findViewById<TextView>(R.id.recipent_time_zone)
 
         val cancelBtn : Button = formView.findViewById<Button>(R.id.cancel_button)
         val saveBtn : Button = formView.findViewById<Button>(R.id.save_button)
 
-        val occasionList : TextView = formView.findViewById<TextView>(R.id.occasion_list)
 
         val calendar = Calendar.getInstance()
         dateEditText.setOnClickListener {

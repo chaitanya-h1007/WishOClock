@@ -67,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cityEditText"
+
             android:focusable="true"
             android:clickable="true"
             android:inputType="text"
@@ -76,50 +77,94 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TimeZone"
-            android:id="@+id/recipent_time_zone"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/recipentTZInputLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TimeZone"
-            android:id="@+id/usr_time_zone"/>
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/recipent_time_zone"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="TimeZone"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userTZInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_time_zone"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="Your Time Zone"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/occasion_list"
-        android:text="Occasion"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
+        android:id="@+id/chip_group_occasion">
+        <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/birthday_chip"
+            android:clickable="true"
+            android:text="Birthday"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/primary_orange"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aniversry_chip"
+            android:text="Birthday"
+            android:clickable="true"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/primary_orange"
+            style="@style/Widget.MaterialComponents.Chip.Action"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/cancel_button"
             android:backgroundTint="@color/primary_orange"
             android:text="Cancel"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/save_button"
             android:backgroundTint="@color/primary_orange"
+
             android:text="Save"/>
 
     </LinearLayout>
-
-
-
-
-
 
 </LinearLayout>
